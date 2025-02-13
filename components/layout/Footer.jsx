@@ -18,19 +18,19 @@ const Footer = () => {
     return (
         <footer className={`padding space-y-4 md:space-y-10 w-full font-inter ${path ? "bg-black text-white" : "bg-white text-black"} `}>
             <div className="flex flex-col justify-center items-center lg:items-start lg:flex-row lg:justify-between gap-12 lg:gap-8">
-                <div className="block space-y-8 w-full lg:w-1/5">
+                <div className="block space-y-4 md:pace-y-8 w-full lg:w-1/5">
                     <Link
                         href={"/"}
-                        className="flex justify-center lg:justify-start items-center gap-2"
+                        className="flex items-center gap-2"
                     >
-                        <p className="font-bold font-Inter italic">VBCC</p>
+                        <p className="font-bold font-Inter italic">Echelon Zero</p>
                     </Link>
-                    <div className="text-sm text-center lg:text-start md:text-base space-y-3">
+                    <div className="text-sm w-3/4 md:text-base space-y-3">
                         <p className={`${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"} `}>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
                         </p>
                     </div>
-                    <ul className="flex justify-center lg:justify-start items-center gap-2.5">
+                    <ul className="flex items-center gap-2.5">
                         {socialLinks.map((list, idx) => (
                             <li key={idx} className="flex-shrink-0">
                                 <Link href={list.href}>{list.icon}</Link>
@@ -38,13 +38,13 @@ const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="flex justify-center items-center md:items-start md:justify-between flex-wrap md:flex-nowrap flex-row gap-10 md:gap-12">
+                <div className="grid grid-cols-2 md:flex md:items-start md:justify-between md:flex-row gap-x-0 gap-y-10 md:gap-12">
                     {/* <div className="flex flex-row sm:justify-center gap-8 md:gap-16"> */}
                     <div className="block space-y-3">
                         <h4 className="text-lg font-semibold capitalize tracking-wider md:text-xl">
                             Product
                         </h4>
-                        <ul className="block space-y-4">
+                        <ul className="block space-y-2.5 md:space-y-4">
                             {footerLinks1.map((list, idx) => (
                                 <li
                                     key={idx}
@@ -59,7 +59,7 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold capitalize tracking-wider md:text-xl">
                             Company
                         </h4>
-                        <ul className="block space-y-4">
+                        <ul className="block space-y-2.5 md:space-y-4">
                             {footerLinks2.map((list, idx) => (
                                 <li
                                     key={idx}
@@ -72,10 +72,10 @@ const Footer = () => {
                     </div>
                     {/* </div> */}
                     <div className="block space-y-3">
-                        <h4 className="text-lg font-semibold tracking-wider md:text-xl text-center md:text-start">
+                        <h4 className="text-lg font-semibold tracking-wider md:text-xl">
                             Support
                         </h4>
-                        <ul className="block space-y-4">
+                        <ul className="block space-y-2.5 md:space-y-4">
                             {footerLinks3.map((list, idx) => (
                                 <li
                                     key={idx}
@@ -86,26 +86,26 @@ const Footer = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="block space-y-3 w-3/5 md:w-[30%]">
-                        <h4 className="text-lg w-max font-semibold tracking-wider md:text-xl text-center md:text-start">
+                    <div className="block space-y-3 w-full md:w-[30%]">
+                        <h4 className="text-lg w-max font-semibold tracking-wider md:text-xl">
                             Contacts us
                         </h4>
                         <ul className={`block space-y-4 w-full ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}>
-                            <li className="flex items-center gap-4">
-                                <FaRegEnvelope className="text-lg text-black md:text-xl flex-shrink-0" />
-                                <h4 className="text-sm md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
+                            <li className="flex items-center gap-2 md:gap-4">
+                                <FaRegEnvelope className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     contact@company.com
                                 </h4>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <IoCallOutline className="text-lg text-black md:text-xl flex-shrink-0" />
-                                <h4 className="text-sm md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
+                            <li className="flex items-center gap-2 md:gap-4">
+                                <IoCallOutline className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     (414) 687 - 5892
                                 </h4>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <IoLocationOutline className="text-lg text-black md:text-xl flex-shrink-0" />
-                                <h4 className="text-sm md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
+                            <li className="flex items-center gap-2 md:gap-4">
+                                <IoLocationOutline className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     794 Mcallister St San Francisco, 94102
                                 </h4>
                             </li>

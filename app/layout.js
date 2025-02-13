@@ -2,6 +2,8 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const inter = Inter({
   variable: "--font-inter",

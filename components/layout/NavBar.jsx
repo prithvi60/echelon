@@ -34,7 +34,7 @@ const NavBar = () => {
             <nav className="flex-center-between w-full relative z-auto">
                 <Link href="/" className="z-[999] relative flex-center gap-x-2">
                     <AcmeLogo />
-                    <h3 className="text-lg xl:text-xl font-Inter italic font-semibold">VBCC</h3>
+                    <h3 className="text-lg xl:text-xl font-Inter italic font-semibold">Echelon Zero</h3>
                 </Link>
 
                 <div className="flex-center gap-x-5">

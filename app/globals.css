@@ -18,8 +18,24 @@
   .sub-menu {
     @apply absolute top-12 left-0 w-full rounded-[6px] -translate-x-1/2 -translate-y-1/2 backdrop-blur text-black;
   }
+
+  .sub-menu_1 {
+    @apply absolute top-12 -left-5 w-full rounded-[6px] -translate-x-1/2 -translate-y-1/2 backdrop-blur text-black;
+  }
 }
 
 .no_scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.neon-glow {
+  color: #fff;
+  text-shadow: 0 0 10px #cf24e5, 0 0 20px #cf24e5, 0 0 40px #cf24e5,
+    0 0 80px #cf24e5, 0 0 120px #cf24e5, 0 0 160px #cf24e5;
+}
+
+/* @media (min-width: 768px) {
+  .custom-slider .slick-slide > div {
+    margin: 0 20px !important;
+  }
+} */
