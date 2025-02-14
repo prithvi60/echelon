@@ -18,6 +18,12 @@ const ProductSlider = () => {
         autoplaySpeed: 5000,
         responsive: [
             {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,

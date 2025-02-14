@@ -2,7 +2,7 @@ import React from "react";
 
 const KeyFunctions = () => {
     return (
-        <section id="Key Functions" className="padding w-full h-full block space-y-10 md:space-y-20 font-inter">
+        <section id="Key Functions" name="Key Functions" className="padding w-full h-full block space-y-10 md:space-y-20 font-inter">
             <h4 className="font-bold text-2xl tracking-wide text-center sm:text-5xl lg:text-6xl">
                 Key Functions
             </h4>

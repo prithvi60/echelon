@@ -52,7 +52,7 @@ export default function MobMenu({ Menus }) {
         <ul>
           {Menus.map((menu, i) => {
             const isMenuOpen = openMenuIndex === i;
-            const hasSubMenu = menu?.subCategories?.length;
+            const hasSubMenu = menu?.subMenus?.length;
             return (
               <li key={i} className="">
                 <span
@@ -73,7 +73,7 @@ export default function MobMenu({ Menus }) {
                     variants={subMenuDrawer}
                     className="ml-5"
                   >
-                    {menu?.subCategories?.map((submenu, idx) => {
+                    {menu?.subMenus?.map((submenu, idx) => {
                       const isSubMenuOpen = openSubMenuIndex === idx;
                       const hasSubDiv = submenu.subDivision?.length;
                       return (
@@ -82,9 +82,6 @@ export default function MobMenu({ Menus }) {
                           className="cursor-pointer w-full"
                         >
                           <div className="flex-center-between hover:bg-white/5 rounded-md gap-x-2 w-full">
-                            {/* <span>
-                              <IoDocumentTextOutline className="bg-white/50 w-fit text-2xl p-1 rounded-md" />
-                            </span> */}
                             <h4
                               className="flex-center-between w-full p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
                               onClick={() => setOpenSubMenuIndex(isSubMenuOpen ? null : idx)}
@@ -97,25 +94,6 @@ export default function MobMenu({ Menus }) {
                               )}
                             </h4>
                           </div>
-                          {hasSubDiv && (
-                            <motion.ul
-                              initial="exit"
-                              animate={isSubMenuOpen ? "enter" : "exit"}
-                              variants={subMenuDrawer}
-                              className="ml-5"
-                            >
-                              {submenu.subDivision?.map((subDiv, id) => (
-                                <li key={id}>
-                                  <Link className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer" href={subDiv.href} onClick={() => toggleDrawer(subDiv.href)}>
-                                    <span>
-                                      <IoDocumentTextOutline className="bg-white/50 w-fit text-xl p-1 rounded-md" />
-                                    </span>
-                                    {subDiv.subLink}
-                                  </Link>
-                                </li>
-                              ))}
-                            </motion.ul>
-                          )}
                         </li>
                       );
                     })}

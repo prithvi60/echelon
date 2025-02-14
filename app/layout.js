@@ -4,6 +4,8 @@ import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SmoothScroll from "@/components/UI/SmoothScroll";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,6 +29,8 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${roboto.variable} antialiased`}>
         <NavBar />
         {children}
+        <SmoothScroll />
+        <Toaster />
         <Footer />
       </body>
     </html>
