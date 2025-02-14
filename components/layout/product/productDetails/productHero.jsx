@@ -36,7 +36,7 @@ const ProductHero = ({ slug }) => {
 
     return (
         <>
-            <section className="flex sticky top-20 z-30 left-0 justify-around items-center py-3.5 bg-[#181818]">
+            <section className="flex sticky top-16 z-30 left-0 justify-around items-center py-3.5 bg-[#181818]">
                 <motion.h4
                     variants={variantTitle}
                     viewport={{ amount: 0.3, once: true }}

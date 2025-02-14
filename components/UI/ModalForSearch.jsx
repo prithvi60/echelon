@@ -15,9 +15,9 @@ const ModalForSearch = ({ path }) => {
         <div className="grid md:-mt-2">
             <button
                 onClick={() => setIsOpen(true)}
-                className={`p-2 rounded-lg shadow-lg text-primary ${path ? "bg-black text-white" : "bg-white text-black"}`}
+                className={`text-primary ${path ? "bg-black text-white" : "bg-white text-black"}`}
             >
-                <IoSearch className="text-xl md:text-2xl text-info" />
+                <IoSearch className="text-lg md:text-xl lg:text-2xl text-info" />
             </button>
             <SpringModal
                 isOpen={isOpen}
@@ -49,14 +49,14 @@ const SpringModal = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsOpen(false)}
-                    className="fixed inset-0 !z-[99999] grid w-full h-full p-8 cursor-pointer bg-blue-900/80 backdrop-blur place-items-center font-inter"
+                    className="fixed inset-0 !z-[99999] grid w-full h-screen p-8 cursor-pointer bg-purple-900/80 backdrop-blur place-items-center font-inter"
                 >
                     <motion.div
                         initial={{ scale: 0, rotate: "12.5deg" }}
                         animate={{ scale: 1, rotate: "0deg" }}
                         exit={{ scale: 0, rotate: "0deg" }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative z-[9999] bg-blue-600 w-full text-white rounded-lg shadow-xl cursor-default bg-primary p-4 md:p-8 max-w-3xl"
+                        className="relative z-[9999] bg-[#ff7f00] w-full text-white rounded-lg shadow-xl cursor-default bg-primary p-4 md:p-8 max-w-3xl"
                     >
                         <div>
                             <div className="flex items-center gap-2">
@@ -68,7 +68,7 @@ const SpringModal = ({
                                         // onChange={(e) => search(e.target.value)}
                                         type="text"
                                         placeholder="Discover the perfect products that meet your needs!"
-                                        className="w-full text-black px-4 py-3 mt-1 border rounded-md border-primary focus:border-none focus:ring-0 focus:outline focus:outline-success placeholder:text-sm md:placeholder:text-base placeholder:text-blue-700 placeholder:opacity-60"
+                                        className="w-full text-black px-4 py-3 mt-1 border rounded-md border-primary focus:border-none focus:ring-0 focus:outline focus:outline-success placeholder:text-sm md:placeholder:text-base placeholder:text- placeholder:opacity-60"
                                     />
                                     <div className="absolute right-0 p-2 bg-white top-3 md:top-2">
                                         <IoSearch className="text-xl md:text-2xl opacity-60 text-info" />

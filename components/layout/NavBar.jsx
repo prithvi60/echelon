@@ -30,9 +30,9 @@ const NavBar = () => {
     const path = pathName.startsWith("/products")
 
     return (
-        <header className={`px-5 md:px-10 py-5 text-sm z-50 sticky h-fit inset-0 flex-center bg-primary font-inter ${path ? "bg-black text-white" : "bg-white text-black"} backdrop-blur-md`}>
+        <header className={`px-5 md:px-10 py-5 text-sm z-30 sticky h-fit inset-0 flex-center bg-primary font-inter ${path ? "bg-black text-white" : "bg-white text-black"} backdrop-blur-md`}>
             <nav className="flex-center-between w-full relative z-auto">
-                <Link href="/" className="z-[999] relative flex-center gap-x-2">
+                <Link href="/" className=" flex-center gap-x-2">
                     <AcmeLogo />
                     <h3 className="text-lg xl:text-xl font-Inter italic font-semibold">Echelon Zero</h3>
                 </Link>

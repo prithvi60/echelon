@@ -90,7 +90,7 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className={`absolute -bottom-[45px] lg:-bottom-[88px] right-24 xl:right-14 cursor-pointer`}
+            className={`absolute z-auto -bottom-[45px] lg:-bottom-[88px] right-24 xl:right-14 cursor-pointer`}
             onClick={onClick}
         >
             <IoIosArrowDropleftCircle className="text-3xl text-white" />
@@ -102,7 +102,7 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className={`absolute cursor-pointer -bottom-[45px] right-10 xl:right-5 lg:-bottom-[88px] z-30`}
+            className={`absolute cursor-pointer -bottom-[45px] right-10 xl:right-5 lg:-bottom-[88px]`}
             onClick={onClick}
         >
             <IoIosArrowDroprightCircle className="text-3xl text-white" />
