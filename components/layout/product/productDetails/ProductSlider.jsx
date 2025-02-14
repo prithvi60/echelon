@@ -1,9 +1,13 @@
-"use client"
-import Image from 'next/image';
-import React from 'react'
-import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from "react-icons/io";
-import Slider from 'react-slick';
-
+"use client";
+import Image from "next/image";
+import React from "react";
+import {
+    IoIosArrowDroprightCircle,
+    IoIosArrowDropleftCircle,
+} from "react-icons/io";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { parentVariant, variantGrid } from "@/constants/Variants";
 
 const ProductSlider = () => {
     const settings = {
@@ -21,34 +25,50 @@ const ProductSlider = () => {
                 breakpoint: 1440,
                 settings: {
                     slidesToShow: 3,
-                }
+                },
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                }
+                },
             },
             {
                 breakpoint: 648,
                 settings: {
                     slidesToShow: 1,
-                }
+                },
             },
-        ]
+        ],
     };
     return (
         <section className="px-5 py-[40px] md:px-[80px] md:py-[70px] bg-black w-full">
-            <div className="slider-container w-full">
+            <motion.div
+                variants={parentVariant}
+                viewport={{ amount: 0.3, once: true }}
+                initial="initial"
+                whileInView="animate"
+                className="slider-container w-full"
+            >
                 <Slider {...settings} className="custom-slider">
                     {exploreSuitLists.map((item, idx) => (
-                        <div
+                        <motion.div
+                            variants={variantGrid}
+                            initial="initial"
+                            whileInView="animate"
+                            custom={idx}
+                            viewport={{ once: true }}
                             key={idx}
                             className="p-2 shadow-lg relative w-full mx-auto "
                         >
                             <div className="pb-3 pt-2 px-4 flex-col gap-2 items-start">
                                 <div className="relative rounded-xl bg-[#260425] w-full p-2 overflow-hidden h-64 md:h-72">
-                                    <Image fill alt="icon" src={item.img} className='object-contain object-center' />
+                                    <Image
+                                        fill
+                                        alt="icon"
+                                        src={item.img}
+                                        className="object-contain object-center"
+                                    />
                                 </div>
                             </div>
                             <div className="py-2">
@@ -56,15 +76,15 @@ const ProductSlider = () => {
                                     {item.desc}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </Slider>
-            </div>
+            </motion.div>
         </section>
-    )
-}
+    );
+};
 
-export default ProductSlider
+export default ProductSlider;
 
 function SampleNextArrow(props) {
     const { onClick } = props;

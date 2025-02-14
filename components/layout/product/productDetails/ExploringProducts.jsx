@@ -1,17 +1,37 @@
+"use client";
 import { Button } from "@/components/UI/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+import { parentVariant, variantGrid, variantTitle } from "@/constants/Variants";
 
 const ExploringProducts = () => {
     return (
         <section className="padding w-full h-full block space-y-10 md:space-y-20 font-inter">
-            <h4 className="font-bold text-2xl text-center tracking-wide sm:text-5xl lg:text-6xl">
+            <motion.h4
+                variants={variantTitle}
+                viewport={{ amount: 0.3, once: true }}
+                initial="initial"
+                whileInView="animate"
+                className="font-bold text-2xl text-center tracking-wide sm:text-5xl lg:text-6xl"
+            >
                 Keep Discovering
-            </h4>
-            <div className="w-full flex flex-col md:flex-row gap-12">
+            </motion.h4>
+            <motion.div
+                variants={parentVariant}
+                viewport={{ amount: 0.3, once: true }}
+                initial="initial"
+                whileInView="animate"
+                className="w-full flex flex-col md:flex-row gap-12"
+            >
                 {exploreList.map((item, idx) => (
-                    <div
+                    <motion.div
+                        variants={variantGrid}
+                        initial="initial"
+                        whileInView="animate"
+                        custom={idx}
+                        viewport={{ once: true }}
                         key={idx}
                         className={`w-4/5 mx-auto md:w-80 border-b border-[#424245] pt-4 pb-8 block text-center text-white space-y-4 relative h-fit`}
                     >
@@ -44,9 +64,9 @@ const ExploringProducts = () => {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };
