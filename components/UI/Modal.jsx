@@ -134,7 +134,7 @@ export const SpringModal = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 !z-[9999] grid w-full h-full p-8 overflow-y-scroll no_scrollbar cursor-pointer bg-purple-900/80 backdrop-blur place-items-center font-Montserrat"
+          className="fixed inset-0 !z-[9999] grid w-full h-full p-8 overflow-y-scroll no_scrollbar cursor-pointer bg-black/90 backdrop-blur place-items-center font-Montserrat"
         >
           <motion.div
             initial={{ scale: 0, rotate: "12.5deg" }}
@@ -217,7 +217,7 @@ export const SpringModal = ({
                     type="submit"
                     className={`w-full py-2 text-sm font-semibold text-white transition-opacity md:text-base bg-[#FF7F00] hover:opacity-90 disabled:cursor-not-allowed disabled:bg-opacity-80 `}
                   >
-                    {status ? <Loader /> : "Enquire"}
+                    {status ? <Loader /> : "Request to buy"}
                   </button>
                 </form>
               </div>

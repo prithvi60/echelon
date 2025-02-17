@@ -42,7 +42,11 @@ const ProductSlider = () => {
         ],
     };
     return (
-        <section className="px-5 py-[40px] md:px-[80px] md:py-[70px] bg-black w-full">
+        <section
+            id="Overview"
+            name="Overview"
+            className="px-5 py-[40px] md:px-[80px] md:py-[70px] bg-black w-full"
+        >
             <motion.div
                 variants={parentVariant}
                 viewport={{ amount: 0.3, once: true }}

@@ -84,7 +84,7 @@ export default function DesktopMenu({ menu }) {
                     onMouseLeave={handleMouseLeave}
                     key={i}
                   >
-                    <div
+                    <Link href={submenu.href || "#"}
                       className={`w-full block text-center space-y-4 relative h-fit`}
                     >
                       <Image
@@ -94,19 +94,18 @@ export default function DesktopMenu({ menu }) {
                         width={50}
                         className="object-contain object-center mx-auto"
                       />
-                      <Link
+                      <div
                         href={submenu.href || "#"}
                         className={`font-semibold block w-11/12 space-y-2`}
                       >
                         <h4 className="text-base xl:text-lg hover:text-black/80  !leading-snug">
                           {submenu.subMenu}
                         </h4>
-
                         <p className="text-[#B64400] text-xs font-semibold tracking-wider capitalize">
                           New
                         </p>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 ))}
             </div>

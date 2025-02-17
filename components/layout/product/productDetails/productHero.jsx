@@ -6,7 +6,13 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Modal1 } from "@/components/UI/Modal";
-import { parentVariant, variant1, variant2, variantGrid, variantTitle } from "@/constants/Variants";
+import {
+    parentVariant,
+    variant1,
+    variant2,
+    variantGrid,
+    variantTitle,
+} from "@/constants/Variants";
 const ProductHero = ({ slug }) => {
     const [isActive, setIsActive] = useState(0);
     const [isDropdown, setIsDropdown] = useState(false);
@@ -36,7 +42,9 @@ const ProductHero = ({ slug }) => {
 
     return (
         <>
-            <section className="flex sticky top-16 z-30 left-0 justify-around items-center py-3.5 bg-[#181818]">
+            <section
+                className="flex sticky top-[74px] xl:top-[84px] z-20 left-0 justify-around items-center py-3.5 bg-[#181818]"
+            >
                 <motion.h4
                     variants={variantTitle}
                     viewport={{ amount: 0.3, once: true }}
@@ -69,7 +77,7 @@ const ProductHero = ({ slug }) => {
                             <Link
                                 to={link.title}
                                 spy={true}
-                                offset={-80}
+                                offset={-100}
                                 smooth={true}
                                 duration={1000}
                                 className="cursor-pointer"
@@ -102,7 +110,7 @@ const ProductHero = ({ slug }) => {
                                     <Link
                                         to={link.title}
                                         spy={true}
-                                        offset={-80}
+                                        offset={-100}
                                         smooth={true}
                                         duration={1000}
                                         onClick={() => handleDropdownClick(id)}
@@ -157,10 +165,13 @@ const ProductHero = ({ slug }) => {
                     >
                         Echelon
                     </motion.h4>
-                    <motion.div variants={variant1}
+                    <motion.div
+                        variants={variant1}
                         viewport={{ amount: 0.3, once: true }}
                         initial="initial"
-                        whileInView="animate" className="relative w-full h-[450px] md:h-[520px] xl:h-[620px]">
+                        whileInView="animate"
+                        className="relative w-full h-[450px] md:h-[520px] xl:h-[620px]"
+                    >
                         <Image
                             alt="product image"
                             fill
@@ -171,7 +182,9 @@ const ProductHero = ({ slug }) => {
                             variants={variant2}
                             viewport={{ amount: 0.3, once: true }}
                             initial="initial"
-                            whileInView="animate" className="absolute top-24 left-0 w-full h-[280px] md:h-[340px] xl:h-[420px]">
+                            whileInView="animate"
+                            className="absolute top-24 left-0 w-full h-[280px] md:h-[340px] xl:h-[420px]"
+                        >
                             <Image
                                 alt="product image"
                                 fill

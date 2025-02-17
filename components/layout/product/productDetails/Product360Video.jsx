@@ -1,27 +1,11 @@
 "use client";
-import { useRef, useState } from "react";
-import { FaPlay, FaPause } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { variant2, variantTitle, variantVideo } from "@/constants/Variants";
 
 const Product360Video = ({ slug }) => {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(true);
-
-    const togglePlayPause = () => {
-        if (videoRef.current) {
-            if (isPlaying) {
-                videoRef.current.play();
-            } else {
-                videoRef.current.pause();
-            }
-            setIsPlaying(!isPlaying);
-        }
-    };
     return (
         <section
-            id="Overview"
-            name="Overview"
             className="padding w-full h-full space-y-5 md:space-y-10"
         >
             <motion.h4
@@ -50,25 +34,14 @@ const Product360Video = ({ slug }) => {
                 initial="initial"
                 whileInView="animate" className="w-full md:w-4/5 mx-auto relative">
                 <video
-                    ref={videoRef}
                     muted
                     loop
-                    // autoPlay
+                    autoPlay
                     playsInline
                     className="h-full w-full object-cover object-center"
                 >
                     <source src="/demo.mp4" type="video/mp4" />
                 </video>
-                <button
-                    onClick={togglePlayPause}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full"
-                >
-                    {isPlaying ? (
-                        <FaPlay className="text-3xl" />
-                    ) : (
-                        <FaPause className="text-3xl" />
-                    )}
-                </button>
             </motion.div>
         </section>
     );

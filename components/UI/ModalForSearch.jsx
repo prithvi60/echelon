@@ -49,14 +49,14 @@ const SpringModal = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsOpen(false)}
-                    className="fixed inset-0 !z-[99999] grid w-full h-screen p-8 cursor-pointer bg-purple-900/80 backdrop-blur place-items-center font-inter"
+                    className="fixed inset-0 !z-[99999] grid w-full h-screen p-8 cursor-pointer bg-black/90 backdrop-blur place-items-center font-inter"
                 >
                     <motion.div
                         initial={{ scale: 0, rotate: "12.5deg" }}
                         animate={{ scale: 1, rotate: "0deg" }}
                         exit={{ scale: 0, rotate: "0deg" }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative z-[9999] bg-[#ff7f00] w-full text-white rounded-lg shadow-xl cursor-default bg-primary p-4 md:p-8 max-w-3xl"
+                        className="relative z-[9999] bg-gradient-to-r from-[#FF7F00] via-[#FF3E9D] to-[#0051FF] w-full text-white rounded-lg shadow-xl cursor-default bg-primary p-4 md:p-8 max-w-3xl"
                     >
                         <div>
                             <div className="flex items-center gap-2">

@@ -47,7 +47,7 @@ export default function MobMenu({ Menus }) {
       </button>
 
       <motion.div
-        className="fixed !z-[999] left-0 right-0 top-16 no_scrollbar overflow-y-auto h-screen bg-[#FFFBEE] backdrop-blur text-black p-6 pb-20"
+        className="fixed !z-[9999] left-0 right-0 top-16 no_scrollbar overflow-y-auto h-screen bg-black backdrop-blur text-white p-6 pb-20"
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0%" : "-100%" }}
       >
