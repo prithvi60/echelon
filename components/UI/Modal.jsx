@@ -73,7 +73,7 @@ export const SpringModal = ({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(emailFormData),
+        body: JSON.stringify(),
       });
 
       if (!emailResponse.ok) {

@@ -5,7 +5,16 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <div className="w-full min-h-screen flex justify-center items-center">
+        <Image
+          alt="echelon gif"
+          src={"/eshelon.gif"}
+          width={900}
+          height={900}
+          className="object-contain object-center"
+        />
+      </div>
+      {/* <Hero />
       <ProductComponent
         btn={"View catalogue"}
         alignStyle={"w-full md:w-2/5"}
@@ -53,7 +62,7 @@ export default function Home() {
         desc={
           "Our burnout furnaces are crafted especially for dental laboratories for burnout of muffles and also for speed investments. It is made with a state-of-the-art design with double-walled stainless-steel sheets and imported insulation material."
         }
-      />
+      /> */}
     </main>
   );
 }
