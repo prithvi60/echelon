@@ -75,13 +75,13 @@ export default ExploringProducts;
 
 const exploreList = [
     {
-        img: "/explore-1.png",
+        img: "/video.gif",
         productName: "Vacuum Sintering Furnace",
         lmHref: "#",
         rtbHref: "#",
     },
     {
-        img: "/explore-2.png",
+        img: "/video.gif",
         productName: "Vacuum Pressing Furnace",
         lmHref: "#",
         rtbHref: "#",

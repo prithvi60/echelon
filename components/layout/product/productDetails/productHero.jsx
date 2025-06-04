@@ -43,7 +43,7 @@ const ProductHero = ({ slug }) => {
     return (
         <>
             <section
-                className="flex sticky top-[74px] xl:top-[84px] z-20 left-0 justify-around items-center py-3.5 bg-[#181818]"
+                className="flex sticky top-[65px] xl:top-[84px] z-20 left-0 justify-around items-center py-3.5 bg-[#181818]"
             >
                 <motion.h4
                     variants={variantTitle}
@@ -183,13 +183,13 @@ const ProductHero = ({ slug }) => {
                             viewport={{ amount: 0.3, once: true }}
                             initial="initial"
                             whileInView="animate"
-                            className="absolute top-24 left-0 w-full h-[280px] md:h-[340px] xl:h-[420px]"
+                            className="absolute top-10 left-0 w-full h-[280px] md:h-[340px] xl:h-[580px]"
                         >
                             <Image
                                 alt="product image"
                                 fill
                                 className="object-contain object-center"
-                                src={"/product-front.png"}
+                                src={"/video.gif"}
                             />
                         </motion.div>
                     </motion.div>

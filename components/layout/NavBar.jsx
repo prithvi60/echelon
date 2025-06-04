@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { navlinks } from "@/constants/Data";
 import DesktopMenu from "../UI/DesktopMenu";
@@ -6,7 +6,6 @@ import MobMenu from "../UI/MobMenu";
 import Link from "next/link";
 import ModalForSearch from "../UI/ModalForSearch";
 import { usePathname } from "next/navigation";
-
 
 const AcmeLogo = () => (
     <svg
@@ -26,15 +25,22 @@ const AcmeLogo = () => (
 );
 
 const NavBar = () => {
-    const pathName = usePathname()
-    const path = pathName.startsWith("/products")
-
+    const pathName = usePathname();
+    const path = pathName.startsWith("/products");
+    const isExactPath = pathName === "/products";
     return (
-        <header className={`px-5 md:px-10 py-5 text-sm z-30 sticky h-fit inset-0 flex-center bg-primary font-inter ${path ? "bg-black text-white" : "bg-white text-black"} backdrop-blur-md`}>
+        <header
+            className={`px-5 md:px-10 py-5 text-sm z-30 sticky h-fit inset-0 flex-center bg-primary font-inter ${path && !isExactPath ? "bg-black text-white" : "bg-white text-black"
+                } backdrop-blur-md`}
+        >
             <nav className="flex-center-between w-full relative z-auto">
                 <Link href="/" className=" flex-center gap-x-2">
-                    <AcmeLogo />
-                    <h3 className="text-lg xl:text-xl font-Inter italic font-semibold">Echelon Zero</h3>
+                    <h3 className="text-lg xl:text-xl font-Inter font-semibold">
+                        Eshelon{" "}
+                        <span className="bg-gradient-to-r from-[#FF7F00] via-[#FF3E9D] text-transparent to-[#0051FF] bg-clip-text font-bold">
+                            Zero
+                        </span>
+                    </h3>
                 </Link>
 
                 <div className="flex-center gap-x-5">

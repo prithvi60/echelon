@@ -4,9 +4,9 @@ import React from "react";
 import { Button } from "../UI/Button";
 import { childVariants, variant2, variantTitle } from "@/constants/Variants";
 import { motion } from "framer-motion";
-const Hero = () => {
+const Hero = ({ home }) => {
     return (
-        <section className="padding w-full h-full font-inter">
+        <section className={`padding w-full h-full font-inter ${home ? "bg-[#F5F5F7]" : "bg-transparent"}`}>
             <div className="text-center w-full space-y-3">
                 <motion.h4
                     variants={variantTitle}
@@ -26,17 +26,19 @@ const Hero = () => {
                 >
                     Think Possible
                 </motion.h4>
-                <motion.div
-                    variants={variantTitle}
-                    viewport={{ amount: 0.3, once: true }}
-                    initial="initial"
-                    whileInView="animate"
-                >
-                    <Button
-                        text={"View catalogue"}
-                        style={"text-sm md:text-base font-roboto font-normal p-2.5 md:p-5 "}
-                    />
-                </motion.div>
+                {!home && (
+                    <motion.div
+                        variants={variantTitle}
+                        viewport={{ amount: 0.3, once: true }}
+                        initial="initial"
+                        whileInView="animate"
+                    >
+                        <Button
+                            text={"View catalogue"}
+                            style={"text-sm md:text-base font-roboto font-normal p-2.5 md:p-5 "}
+                        />
+                    </motion.div>
+                )}
                 <motion.div
                     variants={childVariants}
                     viewport={{ amount: 0.3, once: true }}
@@ -46,7 +48,7 @@ const Hero = () => {
                 >
                     <Image
                         fill
-                        src={"/hero-bg.png"}
+                        src={"/video.gif"}
                         alt="hero bg image"
                         className="object-contain object-center"
                     />

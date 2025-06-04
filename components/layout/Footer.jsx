@@ -10,24 +10,31 @@ import {
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Footer = () => {
-    const pathName = usePathname()
-    const path = pathName.startsWith("/products")
+    const pathName = usePathname();
+    const path = pathName.startsWith("/products");
 
     return (
-        <footer className={`padding space-y-4 md:space-y-10 w-full font-inter ${path ? "bg-black text-white" : "bg-white text-black"} `}>
+        <footer
+            className={`padding space-y-4 md:space-y-10 w-full font-inter ${path ? "bg-black text-white" : "bg-white text-black"
+                } `}
+        >
             <div className="flex flex-col justify-center items-center lg:items-start lg:flex-row lg:justify-between gap-12 lg:gap-8">
                 <div className="block space-y-4 md:pace-y-8 w-full lg:w-1/5">
-                    <Link
-                        href={"/"}
-                        className="flex items-center gap-2"
-                    >
-                        <p className="font-bold font-Inter italic">Echelon Zero</p>
+                    <Link href={"/"} className="flex items-center gap-2 w-max relative">
+                        <Image
+                            alt="eshelon logo"
+                            width={100}
+                            height={100}
+                            src={"/EZ-logo.svg"}
+                            className="size-10 md:size-14 object-contain object-center"
+                        />
                     </Link>
                     <div className="text-sm w-3/4 md:text-base space-y-3">
                         <p className={`${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"} `}>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                            Lorem ipsum dolor sit amet
                         </p>
                     </div>
                     <ul className="flex items-center gap-2.5">
@@ -48,7 +55,8 @@ const Footer = () => {
                             {footerLinks1.map((list, idx) => (
                                 <li
                                     key={idx}
-                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}
+                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"
+                                        }`}
                                 >
                                     <Link href={list.href}>{list.menu}</Link>
                                 </li>
@@ -63,7 +71,8 @@ const Footer = () => {
                             {footerLinks2.map((list, idx) => (
                                 <li
                                     key={idx}
-                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}
+                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"
+                                        }`}
                                 >
                                     <Link href={list.href}>{list.menu}</Link>
                                 </li>
@@ -79,7 +88,8 @@ const Footer = () => {
                             {footerLinks3.map((list, idx) => (
                                 <li
                                     key={idx}
-                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}
+                                    className={`text-sm capitalize md:text-base tracking-wide ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"
+                                        }`}
                                 >
                                     <Link href={list.href}>{list.menu}</Link>
                                 </li>
@@ -90,21 +100,33 @@ const Footer = () => {
                         <h4 className="text-lg w-max font-semibold tracking-wider md:text-xl">
                             Contacts us
                         </h4>
-                        <ul className={`block space-y-4 w-full ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}>
+                        <ul
+                            className={`block space-y-4 w-full ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"
+                                }`}
+                        >
                             <li className="flex items-center gap-2 md:gap-4">
-                                <FaRegEnvelope className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <FaRegEnvelope
+                                    className={`${path ? "text-[#FFFFFFA3]" : "text-black"
+                                        } text-lg md:text-xl flex-shrink-0`}
+                                />
                                 <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     contact@company.com
                                 </h4>
                             </li>
                             <li className="flex items-center gap-2 md:gap-4">
-                                <IoCallOutline className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <IoCallOutline
+                                    className={`${path ? "text-[#FFFFFFA3]" : "text-black"
+                                        } text-lg md:text-xl flex-shrink-0`}
+                                />
                                 <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     (414) 687 - 5892
                                 </h4>
                             </li>
                             <li className="flex items-center gap-2 md:gap-4">
-                                <IoLocationOutline className={`${path ? "text-[#FFFFFFA3]" : "text-black"} text-lg md:text-xl flex-shrink-0`} />
+                                <IoLocationOutline
+                                    className={`${path ? "text-[#FFFFFFA3]" : "text-black"
+                                        } text-lg md:text-xl flex-shrink-0`}
+                                />
                                 <h4 className="text-[13px] md:text-base flex items-center gap-3 tracking-wide hover:text-warning">
                                     794 Mcallister St San Francisco, 94102
                                 </h4>
@@ -114,16 +136,25 @@ const Footer = () => {
                 </div>
             </div>
             <hr className="w-[90%] mx-auto p-[0.5px] bg-[#D9DBE9]" />
-            <div className={`flex flex-col justify-center items-center lg:flex-row lg:justify-between gap-8 ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"}`}>
+            <div
+                className={`flex flex-col justify-center items-center lg:flex-row lg:justify-between gap-8 ${path ? "text-[#FFFFFFA3]" : "text-[#6F6C90]"
+                    }`}
+            >
                 <p className="text-sm text-center lg:text-start md:text-base">
                     Copyright © {new Date().getFullYear()} Echelon Zero
                 </p>
                 <div className="text-xs text-center lg:text-start md:text-base flex items-center gap-3 md:gap-4">
                     <p>All rights reserved</p>
-                    <p className={`underline underline-offset-4 ${path ? "text-[#90ADEC]" : "text-[#0033A0]"}`}>
+                    <p
+                        className={`underline underline-offset-4 ${path ? "text-[#90ADEC]" : "text-[#0033A0]"
+                            }`}
+                    >
                         Terms and Conditions
                     </p>
-                    <p className={`${path ? "text-[#90ADEC]" : "text-[#0033A0]"} underline underline-offset-4`}>
+                    <p
+                        className={`${path ? "text-[#90ADEC]" : "text-[#0033A0]"
+                            } underline underline-offset-4`}
+                    >
                         Privacy Policy
                     </p>
                 </div>

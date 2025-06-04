@@ -4,6 +4,7 @@ import Product360Video from "@/components/layout/product/productDetails/Product3
 import ProductHero from "@/components/layout/product/productDetails/productHero";
 import ProductSlider from "@/components/layout/product/productDetails/ProductSlider";
 import Specifications from "@/components/layout/product/productDetails/Specifications";
+import { keyFunctionList } from "@/constants/Data";
 import React from "react";
 
 const Page = async ({ params }) => {
@@ -14,7 +15,7 @@ const Page = async ({ params }) => {
             <ProductHero slug={decodedSlug} />
             <ProductSlider />
             <Product360Video slug={decodedSlug} />
-            <KeyFunctions />
+            <KeyFunctions data={keyFunctionList} />
             <Specifications />
             <ExploringProducts />
         </section>

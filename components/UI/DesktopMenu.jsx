@@ -56,11 +56,11 @@ export default function DesktopMenu({ menu }) {
         key={menu.menu}
       >
         <span className="flex-center gap-1 hover:bg-white/5 text-base xl:text-xl cursor-pointer px-1 xl:px-2 py-1.5 xl:py-2 rounded-xl relative w-max after:hover:absolute after:hover:bottom-0.5 after:hover:right-1 after:hover:w-11/12 after:hover:p-[2px] after:hover:bg-black after:hover:rounded-sm">
-          {menu.menu === "Products" ? (
+          {/* {menu.menu === "Products" ? (
             `${menu.menu}`
-          ) : (
-            <Link href={menu.href}>{menu.menu}</Link>
-          )}
+          ) : ( */}
+          <Link href={menu.href}>{menu.menu}</Link>
+          {/* // )} */}
 
           {hasSubMenu && (
             <MdOutlineKeyboardArrowDown className="mt-[0.6px] text-lg md:text-xl group-hover/link:text-warning group-hover/link:rotate-180 duration-200" />
